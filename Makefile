@@ -3,7 +3,7 @@ BIN = node_modules/.bin
 .PHONY: bootstrap lint
 
 bootstrap:
-	npm install
+	yarn
 
 lint:
 	$(BIN)/standard
