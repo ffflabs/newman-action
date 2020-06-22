@@ -2,7 +2,7 @@ name: 'Newman Action'
 description: 'Run Postman collections via Newman'
 author: 'Matt Ball'
 branding:
-  icon: 'check-square'  
+  icon: 'check-square'
   color: 'orange'
 inputs:
   apiKey:
@@ -68,4 +68,4 @@ inputs:
     description: 'Secret client key passphrase'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'
