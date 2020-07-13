@@ -64,10 +64,20 @@ acorn@^7.1.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.3.1.tgz#85010754db53c3fbaf3b9ea3e083aa5c5d147ffd"
   integrity sha512-tLc0wSnatxAQHVHUapaHdz72pi9KUyHjq5KyHjGg9Y8Ifdc79pTh2XvI6I1/chZbnM7QtNKzh66ooDogPZSleA==
 
-ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
+ajv@^6.10.0, ajv@^6.10.2:
   version "6.12.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.2.tgz#c629c5eced17baf314437918d2da88c99d5958cd"
   integrity sha512-k+V+hzjm5q/Mr8ef/1Y9goCmlsK4I6Sm74teeyGvFk1XrOsbsKLjEdrvny42CZ+a8sXbk8KWpY/bDwS+FLL2UQ==
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    fast-json-stable-stringify "^2.0.0"
+    json-schema-traverse "^0.4.1"
+    uri-js "^4.2.2"
+
+ajv@^6.5.5:
+  version "6.12.3"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.3.tgz#18c5af38a111ddeb4f2697bd78d68abc1cabd706"
+  integrity sha512-4K0cK3L1hsqk9xIb2z9vs/XU+PGJZ9PNpJRDS9YLzmNdX6jmVPfamLvTJr0aDAusnHyCHO6MjzlkAsgtqp9teA==
   dependencies:
     fast-deep-equal "^3.1.1"
     fast-json-stable-stringify "^2.0.0"
@@ -256,10 +266,10 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chardet@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/chardet/-/chardet-1.1.0.tgz#c653dfc04731e8bfa90da4fd4968d69129d72b12"
-  integrity sha512-K6BWWdt9ncg6TDTX42J57s9zZWVI1DXVYQ6zUM8dZUB2TDeV5ia4kDei19r/pMxNzSGYYf6LqHsyvEybvTPHuA==
+chardet@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/chardet/-/chardet-1.2.1.tgz#8e0b4441c96f1ad747431989db1ff590739c6931"
+  integrity sha512-bnDt+69nS8Hi7Xmt0uDiQ32/hRpMK/0pc4lc32Y87voBgdsz26VZXOyo5VNQWQfe7rUsevZIfWB82C5QSpCXcQ==
 
 chardet@^0.7.0:
   version "0.7.0"
@@ -1328,10 +1338,15 @@ lodash.mergewith@^4.6.1:
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
   integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
 
-lodash@4.17.15, lodash@^4.17.14, lodash@^4.17.15:
+lodash@4.17.15, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
+lodash@^4.17.14:
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 loose-envify@^1.4.0:
   version "1.4.0"
@@ -1414,17 +1429,17 @@ natural-compare@^1.4.0:
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
 neo-async@^2.6.0:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
-  integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
+  integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
 newman@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/newman/-/newman-5.1.0.tgz#ab7258589eeacaeb9adff6905b38d97bd514bcd6"
-  integrity sha512-V3HrweC3t7tsHshOiu8cG2dbHvJwMf5/rxwqBHAK/fZq/H1CGPSLM/T6IhbTpbPqIs+GpklQXO9VsFFuUf7Nfw==
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/newman/-/newman-5.1.1.tgz#fbadeb29ac3f90989a54fdc9ce7d91debe0ae932"
+  integrity sha512-XkC3JNIY8Lb8c5vt2jYhFUeqQU/zyHSwgWgtrychJKZYIzL63YS9+jB5EY9qsuUwBBg7rVei4FnJzzOZV/9rHA==
   dependencies:
     async "3.2.0"
-    chardet "1.1.0"
+    chardet "1.2.1"
     cli-progress "3.8.2"
     cli-table3 "0.6.0"
     colors "1.4.0"
@@ -1437,7 +1452,7 @@ newman@^5.1.0:
     postman-collection "3.6.2"
     postman-collection-transformer "3.3.2"
     postman-request "2.88.1-postman.23"
-    postman-runtime "7.26.0"
+    postman-runtime "7.26.1"
     pretty-ms "7.0.0"
     semver "7.3.2"
     serialised-error "1.1.3"
@@ -1764,10 +1779,10 @@ postman-request@2.88.1-postman.23:
     tough-cookie "~2.5.0"
     uuid "^3.3.2"
 
-postman-runtime@7.26.0:
-  version "7.26.0"
-  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.26.0.tgz#cfe542929b78372cad01b0e934a6faecaae406cf"
-  integrity sha512-ueQdLL1PtvfVbzg46eKSy/9tpJz1nIDrJVRabpTph3j6Uz4otB5oC63SW8c50QcOGOn1Q1MlNDYN8mWjvRyPgg==
+postman-runtime@7.26.1:
+  version "7.26.1"
+  resolved "https://registry.yarnpkg.com/postman-runtime/-/postman-runtime-7.26.1.tgz#6284d4c5a910a14984db26bf950648340ae60790"
+  integrity sha512-zzQHwFLJG3ELOWZWaeKPy784eIVRGzpDxPni7hwULsJ/EF/pQWbxm6ERcPwwCHCBRneTqb/mOB9YuZ9N8utOtA==
   dependencies:
     async "2.6.3"
     aws4 "1.10.0"
@@ -1782,17 +1797,17 @@ postman-runtime@7.26.0:
     performance-now "2.1.0"
     postman-collection "3.6.2"
     postman-request "2.88.1-postman.23"
-    postman-sandbox "3.5.4"
+    postman-sandbox "3.5.5"
     postman-url-encoder "2.1.1"
     resolve-from "5.0.0"
     serialised-error "1.1.3"
     tough-cookie "3.0.1"
     uuid "3.4.0"
 
-postman-sandbox@3.5.4:
-  version "3.5.4"
-  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-3.5.4.tgz#82c7249b890bc7782a63ee091b1b009981f0d814"
-  integrity sha512-spo4UudKdHZ7GsTpkg+fDgwWAYuSaR7pOaMRHkIWR7IArG4iTf1Rm9BDe+vyy8ACFWtOLFWAnOYqPKnLhN6DVA==
+postman-sandbox@3.5.5:
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/postman-sandbox/-/postman-sandbox-3.5.5.tgz#d815b05414419aa96ecceaf2cbf0ad44a20110c3"
+  integrity sha512-uAwPl/HRybep5Go0PC+orFlIZN4np/V1PZQhplVxWDQp/k6JNku4q4Vp1x6ejUMjqiPFTfTMjjzdhPhSv8vhiw==
   dependencies:
     inherits "2.0.4"
     lodash "4.17.15"

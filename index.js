@@ -1,16 +1,16 @@
-const core = require('@actions/core')
-const newman = require('newman')
+const core = require('@actions/core');
+const newman = require('newman');
 
-init()
+init();
 
-async function init () {
+async function init() {
   try {
-    const get = core.getInput
-    const apiBase = 'https://api.getpostman.com'
-    const idRegex = /^[0-9]{7}-\w{8}-\w{4}-\w{4}-\w{4}-\w{12}$/
+    const get = core.getInput;
+    const apiBase = 'https://api.getpostman.com';
+    const idRegex = /^[0-9]{7}-\w{8}-\w{4}-\w{4}-\w{4}-\w{12}$/;
 
     const options = {
-      apiKey: '?apikey=' + get('postmanApiKey'),
+      apiKey: '?apikey=' + get('apiKey') || get('postmanApiKey'),
       collection: get('collection'),
       environment: get('environment'),
       globals: get('globals'),
@@ -32,37 +32,37 @@ async function init () {
       color: get('color'),
       sslClientCert: get('sslClientCert'),
       sslClientKey: get('sslClientKey'),
-      sslClientPassphrase: get('sslClientPassphrase')
-    }
+      sslClientPassphrase: get('sslClientPassphrase'),
+    };
 
     if (!options.apiKey) {
-      core.warn('No Postman API key provided.')
+      core.warn('No Postman API key provided.');
     }
 
     if (options.collection.match(idRegex)) {
-      options.collection = `${apiBase}/collections/${options.collection}${options.apiKey}`
+      options.collection = `${apiBase}/collections/${options.collection}${options.apiKey}`;
     }
 
     if (options.environment.match(idRegex)) {
-      options.environment = `${apiBase}/environments/${options.environment}${options.apiKey}`
+      options.environment = `${apiBase}/environments/${options.environment}${options.apiKey}`;
     }
 
     if (options.globals) {
       try {
-        options.globals = JSON.parse(options.globals)
+        options.globals = JSON.parse(options.globals);
       } catch (e) {}
     }
 
-    runNewman(options)
+    runNewman(options);
   } catch (error) {
-    core.setFailed(error.message)
+    core.setFailed(error.message);
   }
 }
 
-function runNewman (options) {
+function runNewman(options) {
   newman.run(options).on('done', (err, summary) => {
     if (err || summary.run.failures.length) {
-      core.setFailed('Newman run failed!' + (err || ''))
+      core.setFailed('Newman run failed!' + (err || ''));
     }
-  })
+  });
 }
