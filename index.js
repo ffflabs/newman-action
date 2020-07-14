@@ -10,12 +10,13 @@ async function init() {
     const idRegex = /^[0-9]{7}-\w{8}-\w{4}-\w{4}-\w{4}-\w{12}$/;
 
     const options = {
-      apiKey: '?apikey=' + get('apiKey') || get('postmanApiKey'),
+      postmanApiKey: '?apikey=' + get('postmanApiKey'),
       collection: get('collection'),
       environment: get('environment'),
       globals: get('globals'),
       iterationCount: Number(get('iterationCount')),
       iterationData: get('iterationData'),
+      exportGlobals: get('exportGlobals'),
       folder: get('folder').split(','),
       workingDir: get('workingDir'),
       insecureFileRead: JSON.parse(get('insecureFileRead')),
@@ -35,16 +36,16 @@ async function init() {
       sslClientPassphrase: get('sslClientPassphrase'),
     };
 
-    if (!options.apiKey) {
+    if (!options.postmanApiKey) {
       core.warn('No Postman API key provided.');
     }
 
     if (options.collection.match(idRegex)) {
-      options.collection = `${apiBase}/collections/${options.collection}${options.apiKey}`;
+      options.collection = `${apiBase}/collections/${options.collection}${options.postmanApiKey}`;
     }
 
     if (options.environment.match(idRegex)) {
-      options.environment = `${apiBase}/environments/${options.environment}${options.apiKey}`;
+      options.environment = `${apiBase}/environments/${options.environment}${options.postmanApiKey}`;
     }
 
     if (options.globals) {

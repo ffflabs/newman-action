@@ -5,7 +5,7 @@ branding:
   icon: 'check-square'
   color: 'orange'
 inputs:
-  apiKey:
+  postmanApiKey:
     description: 'Postman API key'
     default: 'apiKey'
   collection:
@@ -66,6 +66,8 @@ inputs:
     description: 'Path to secret client key file'
   sslClientPassphrase:
     description: 'Secret client key passphrase'
+  exportGlobals:
+    description: 'Specify an output file to dump Globals before exiting'
 runs:
   using: 'node12'
   main: 'dist/index.js'

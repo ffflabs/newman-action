@@ -38,7 +38,7 @@ The latest version of your collection and/or environment is available through [P
 - uses: actions/checkout@master
 - uses: matt-ball/newman-action@master
   with:
-    apiKey: ${{ secrets.postmanApiKey }}
+    postmanApiKey: ${{ secrets.postmanApiKey }}
     collection: 5922408-c22ef764-b464-424c-8702-750343478723
     environment: 5922408-228c7edd-fc15-4f68-9665-a35d7df6945b
 ```
@@ -71,7 +71,7 @@ jobs:
           fetch-depth: 2
       - uses: ffflabs/newman-action@v0.1.3
         with:
-          apiKey: ${{ env.POSTMAN_APIKEY }}
+          postmanApiKey: ${{ env.POSTMAN_APIKEY }}
           collection: ${{ env.POSTMAN_COLLECTION }}
           environment: ${{ env.POSTMAN_ENVIRONMENT }}
           iterationData: ${{ env.POSTMAN_ITERATION_DATA }}
@@ -85,4 +85,4 @@ See [Workflow syntax for GitHub Actions](https://help.github.com/en/articles/wor
 
 ## Other settings
 
-As well as `apiKey`, `collection`, and `environment`, all other Newman settings are supported. You can find a full list [on the Newman docs](https://github.com/postmanlabs/newman#api-reference).
+As well as `postmanApiKey`, `collection`, and `environment`, all other Newman settings are supported. You can find a full list [on the Newman docs](https://github.com/postmanlabs/newman#api-reference).
