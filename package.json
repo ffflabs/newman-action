@@ -1,6 +1,6 @@
 {
   "name": "newman-action",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Run Postman collections with Newman as a GitHub Action",
   "main": "dist/index.js",
   "scripts": {
@@ -19,9 +19,9 @@
   "author": "Matt Ball",
   "license": "Apache-2.0",
   "dependencies": {
-    "@actions/core": "^1.0.0",
+    "@actions/core": "^1.2.6",
     "@zeit/ncc": "^0.22.3",
-    "newman": "^5.1.0"
+    "newman": "^5.2.1"
   },
   "devDependencies": {
     "standard": "^14.0.2"

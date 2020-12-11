@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@actions/core@^1.0.0":
+"@actions/core@^1.2.6":
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.2.6.tgz#a78d49f41a4def18e88ce47c2cac615d5694bf09"
   integrity sha512-ZQYitnqiyBc3D+k7LsgSBmMDVkOVidaagDG7j3fOym77jNunWRuYx7VSHa9GNfFZh+zh61xsCjRj4JxMZlDqTA==
@@ -1448,7 +1448,7 @@ neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-newman@^5.1.0:
+newman@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/newman/-/newman-5.2.1.tgz#2cc4aa64c13c8e45a2f2f8564650dbd071712210"
   integrity sha512-kEuTMQCiORHZFx92sPVih8RHsJ40JxgxvlsrUe6MFXLQg2/UrO1KaUQCDabTy41tOu0a+dx6Mtg+x+uK1rCPcA==
