@@ -1,6 +1,6 @@
 {
   "name": "newman-action",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Run Postman collections with Newman as a GitHub Action",
   "main": "dist/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@zeit/ncc": "^0.22.3",
+    "@vercel/ncc": "^0.25.1",
     "newman": "^5.2.1"
   },
   "devDependencies": {
