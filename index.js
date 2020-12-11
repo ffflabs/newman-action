@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const newman = require('newman');
 
 init();
-console.dir(core);
+
 async function init() {
   try {
     const get = core.getInput;
@@ -35,7 +35,7 @@ async function init() {
       sslClientKey: get('sslClientKey'),
       sslClientPassphrase: get('sslClientPassphrase'),
     };
-
+    console.dir(options);
     if (!options.apiKey) {
       core.warn('No Postman API key provided.');
     }
