@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const newman = require('newman');
 
 init();
-
+console.dir(core);
 async function init() {
   try {
     const get = core.getInput;
@@ -10,7 +10,7 @@ async function init() {
     const idRegex = /^[0-9]{7}-\w{8}-\w{4}-\w{4}-\w{4}-\w{12}$/;
 
     const options = {
-      postmanApiKey: '?apikey=' + get('postmanApiKey'),
+      apiKey: '?apikey=' + get('apiKey'),
       collection: get('collection'),
       environment: get('environment'),
       globals: get('globals'),
@@ -36,16 +36,16 @@ async function init() {
       sslClientPassphrase: get('sslClientPassphrase'),
     };
 
-    if (!options.postmanApiKey) {
+    if (!options.apiKey) {
       core.warn('No Postman API key provided.');
     }
 
     if (options.collection.match(idRegex)) {
-      options.collection = `${apiBase}/collections/${options.collection}${options.postmanApiKey}`;
+      options.collection = `${apiBase}/collections/${options.collection}${options.apiKey}`;
     }
 
     if (options.environment.match(idRegex)) {
-      options.environment = `${apiBase}/environments/${options.environment}${options.postmanApiKey}`;
+      options.environment = `${apiBase}/environments/${options.environment}${options.apiKey}`;
     }
 
     if (options.globals) {
