@@ -4,6 +4,8 @@
   "description": "Run Postman collections with Newman as a GitHub Action",
   "main": "dist/index.js",
   "scripts": {
+    "lint": "eslint --ext .ts,.js --ignore-path .gitignore  index.js",
+    "lintfix": "eslint --ext .ts,.js --ignore-path .eslintignore  index.js --fix",
     "build": "ncc build index.js --license licenses.txt",
     "test": "jest"
   },
@@ -16,14 +18,28 @@
     "postman",
     "newman"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lintfix && yarn build"
+    }
+  },
   "author": "Matt Ball",
   "license": "Apache-2.0",
   "dependencies": {
     "@actions/core": "^1.2.6"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
     "@vercel/ncc": "^0.25.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "7",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.3.6",
     "newman": "^5.2.1",
-    "standard": "^14.0.2"
+    "prettier": "^2.0.2",
+    "standard": "^14.0.2",
+    "typescript": "^4"
   }
 }
