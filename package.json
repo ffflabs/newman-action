@@ -20,7 +20,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lintfix && yarn build"
+      "pre-commit": "yarn lintfix && yarn build && git add dist"
     }
   },
   "author": "Matt Ball",
