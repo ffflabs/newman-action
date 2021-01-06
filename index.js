@@ -14,7 +14,7 @@ async function init() {
       collection: get('collection'),
       environment: get('environment'),
       globals: get('globals'),
-      silent: get('silent'),
+      silent: JSON.parse(get('silent')),
       iterationCount: Number(get('iterationCount')),
       iterationData: get('iterationData'),
       exportGlobals: get('exportGlobals'),
